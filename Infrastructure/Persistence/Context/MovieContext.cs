@@ -12,7 +12,7 @@ namespace Persistence.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=DESKTOP-JDMU1LH;initial Catalog=MovieApiDb;integrated Security=true;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-JDMU1LH;initial Catalog=MovieApiDb;integrated Security=true;TrustServerCertificate=true;");
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Tag> Tags { get; set; }
