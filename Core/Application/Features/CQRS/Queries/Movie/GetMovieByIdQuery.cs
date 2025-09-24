@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.Features.CQRS.Queries.Movie
 {
-    internal class GetMovieByIdQuery
+    public class GetMovieByIdQuery
     {
         public int MovieId { get; set; }
     }
