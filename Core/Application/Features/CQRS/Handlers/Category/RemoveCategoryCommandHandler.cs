@@ -16,7 +16,7 @@ namespace Application.Features.CQRS.Handlers.Category
         {
             _movieContext = movieContext;
         }
-        public async void Handle(RemoveCategoryCommand command)
+        public async Task Handle(RemoveCategoryCommand command)
         {
             var value = await _movieContext.Movies.FindAsync(command.CategoryId);
             _movieContext.Movies.Remove(value);

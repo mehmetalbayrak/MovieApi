@@ -17,7 +17,7 @@ namespace Application.Features.CQRS.Handlers.Movie
         {
             _movieContext = movieContext;
         }
-        public async void Handle(CreateMovieCommand command)
+        public async Task Handle(CreateMovieCommand command)
         {
             _movieContext.Movies.Add(new Domain.Entities.Movie()
             {
