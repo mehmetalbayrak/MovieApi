@@ -15,12 +15,13 @@ namespace WebApi.Controllers
         private readonly UpdateCategoryCommandHandler _updateCategoryCommandHandler;
         private readonly RemoveCategoryCommandHandler _removeCategoryCommandHandler;
 
-        public CategoriesController(GetCategoryQueryHandler getCategoryQueryHandler, GetCategoryByIdQueryHandler getCategoryByIdQueryHandler, CreateCategoryCommandHandler createCategoryCommandHandler, RemoveCategoryCommandHandler removeCategoryCommandHandler)
+        public CategoriesController(GetCategoryQueryHandler getCategoryQueryHandler, GetCategoryByIdQueryHandler getCategoryByIdQueryHandler, CreateCategoryCommandHandler createCategoryCommandHandler, RemoveCategoryCommandHandler removeCategoryCommandHandler, UpdateCategoryCommandHandler updateCategoryCommandHandler)
         {
             _getCategoryQueryHandler = getCategoryQueryHandler;
             _getCategoryByIdQueryHandler = getCategoryByIdQueryHandler;
             _createCategoryCommandHandler = createCategoryCommandHandler;
             _removeCategoryCommandHandler = removeCategoryCommandHandler;
+            _updateCategoryCommandHandler = updateCategoryCommandHandler;
         }
         [HttpGet]
         public async Task<IActionResult> CategoryList()
