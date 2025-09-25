@@ -1,6 +1,8 @@
 using Application.Features.CQRS.Handlers.Category;
 using Application.Features.CQRS.Handlers.Movie;
+using Application.Features.Mediator.Handlers.Tag;
 using Persistence.Context;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +21,10 @@ builder.Services.AddScoped<GetMovieByIdQueryHandler>();
 builder.Services.AddScoped<CreateMovieCommandHandler>();
 builder.Services.AddScoped<RemoveMovieCommandHandler>();
 builder.Services.AddScoped<UpdateMovieCommandHandler>();
+
+//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetTagQueryHandler).Assembly));
 
 builder.Services.AddControllers();
 
