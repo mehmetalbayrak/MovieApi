@@ -1,12 +1,8 @@
-﻿using Application.Features.Mediator.Queries;
+﻿using Application.Features.Mediator.Queries.Cast;
 using Application.Features.Mediator.Results.Cast;
 using MediatR;
 using Persistence.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Application.Features.Mediator.Handlers.Cast
 {

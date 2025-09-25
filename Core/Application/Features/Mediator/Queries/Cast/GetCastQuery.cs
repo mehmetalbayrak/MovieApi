@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Application.Features.Mediator.Queries
+namespace Application.Features.Mediator.Queries.Cast
 {
     public class GetCastQuery : IRequest<List<GetCastQueryResult>>
     {
