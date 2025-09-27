@@ -14,11 +14,11 @@
 	<html lang="en" class="no-js">
 
 	<!-- movielist07:38-->
-	@await Component.InvokeAsync("_UserLayoutWebUIHeadComponentPartial")
-
+@* 	@await Component.InvokeAsync("_UserLayoutWebUIHeadComponentPartial")
+ *@
 	<body>
 
-		@await Component.InvokeAsync("_UserLayoutWebUIPreloaderComponentPartial")
+		@* @await Component.InvokeAsync("_UserLayoutWebUIPreloaderComponentPartial")
 
 
 		<!--end of preloading-->
@@ -43,7 +43,8 @@
 
 
 		<!-- footer section-->
-		@await Component.InvokeAsync("_UserLayoutWebUIFooterComponentPartial")
+		@await Component.InvokeAsync("_UserLayoutWebUIFooterComponentPartial") *@
+		@RenderBody()
 
 		<!-- end of footer section-->
 
